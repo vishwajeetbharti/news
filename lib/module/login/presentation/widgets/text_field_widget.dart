@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:news/utils/extentions.dart';
 
 class CustomTextFormField extends StatefulWidget {
   final bool isPassword;
@@ -262,34 +263,4 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       ],
     );
   }
-}
-
-extension Gap on num {
-  SizedBox get hGap => SizedBox(
-        height: SizeUtil.mediaQuery.size.height *
-            (toDouble() / SizeUtil.baseHeight),
-      );
-
-  SizedBox get wGap => SizedBox(
-        width:
-            SizeUtil.mediaQuery.size.width * (toDouble() / SizeUtil.baseWidth),
-      );
-
-  double get h =>
-      SizeUtil.mediaQuery.size.height * (toDouble() / SizeUtil.baseHeight);
-
-  double get w =>
-      SizeUtil.mediaQuery.size.width * (toDouble() / SizeUtil.baseWidth);
-}
-
-class SizeUtil {
-  static late MediaQueryData _mediaQueryData;
-
-  static void init(BuildContext context) {
-    _mediaQueryData = MediaQuery.of(context);
-  }
-
-  static MediaQueryData get mediaQuery => _mediaQueryData;
-  static int get baseHeight => 913;
-  static int get baseWidth => 375;
 }

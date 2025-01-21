@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news/module/login/presentation/view/login_screen.dart';
+import 'package:news/utils/sized.dart';
 import 'package:provider/provider.dart';
 
-import 'module/login/presentation/widgets/text_field_widget.dart';
 import 'module/news/presentation/view-model/favorites_provider.dart';
 import 'module/news/presentation/view-model/news_provider.dart';
 import 'module/news/presentation/views/favorite_screen.dart';

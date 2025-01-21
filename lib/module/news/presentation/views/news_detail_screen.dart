@@ -74,7 +74,7 @@ class NewsDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              article.content ?? 'No content available',
+              article.content ,
               style: const TextStyle(
                 fontSize: 16.0,
                 color: AppColors.white,

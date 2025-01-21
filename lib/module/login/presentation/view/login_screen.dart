@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news/module/login/presentation/widgets/text_field_widget.dart';
 import 'package:news/utils/app_routes.dart';
+import 'package:news/utils/extentions.dart';
+import 'package:news/utils/sized.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -18,11 +20,12 @@ class _LoginScreenState extends State<LoginScreen> {
   final FocusNode passNode = FocusNode();
   @override
   Widget build(BuildContext context) {
+    SizeUtil.init(context);
     return Scaffold(
-      body: Form(
-        key: _formKey,
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15.w),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        child: Form(
+          key: _formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,9 +38,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              30.hGap,
+              // 30.hGap,
               SizedBox(
-                height: 120.h,
+                height: 120,
                 child: CustomTextFormField(
                   textEditingController: _email,
                   labelText: 'Email ID*',
@@ -55,9 +58,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
               ),
-              10.hGap,
               SizedBox(
-                height: 120.h,
+                height: 120,
                 child: CustomTextFormField(
                   textEditingController: _pass,
                   labelText: 'Password',
